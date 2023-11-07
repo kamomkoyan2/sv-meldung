@@ -4,13 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46fb77a1-f485-4ea2-8d90-a3ccd4eefa57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="d131ff26-549e-4e3f-ba93-9420ec35cc41" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adoc.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redirection-rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets/examples.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/API-quickstart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/API-reference.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/Changes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/Create-mandate-for-companies-access-for.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/Delete-mandate-by-company-number.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/Grant-access-of-mandate.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/Mandate.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/topics/api-docs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webHelpADOC2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpADOC2-all.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/writerside.cfg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Writerside" />
   </component>
   <component name="InstanceColorv3">
     <option name="map">
@@ -45,17 +65,36 @@
       </map>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2Xr5mKjSILzoQDFIVuaEC2eC7qd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "master"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "<unknown>"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Writerside" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Meldeportal" type="StardustRunConfiguration" factoryName="save-as-zip">
-      <option name="folderPath" value="$PROJECT_DIR$/.." />
+    <configuration name="Build Meldeportal (adoc)" type="StardustRunConfiguration" factoryName="save-as-zip">
+      <option name="folderPath" value="$PROJECT_DIR$" />
       <option name="instanceId" value="adoc" />
       <option name="instanceName" value="Meldeportal" />
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>
