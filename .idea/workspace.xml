@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d131ff26-549e-4e3f-ba93-9420ec35cc41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adoc.tree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c.list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openapi.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redirection-rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/examples.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/API-quickstart.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/API-reference.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/Changes.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/Create-mandate-for-companies-access-for.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/Delete-mandate-by-company-number.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/Grant-access-of-mandate.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/Mandate.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topics/api-docs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v.list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webHelpADOC2-all.zip" beforeDir="false" afterPath="$PROJECT_DIR$/webHelpADOC2-all.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/writerside.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webHelpADOC2-all.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Writerside" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="InstanceColorv3">
     <option name="map">
@@ -80,11 +65,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>"
+    "git-widget-placeholder": "master"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Writerside" />
     </key>
   </component>

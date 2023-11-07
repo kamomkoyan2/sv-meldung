@@ -62,6 +62,10 @@ jobs:
         with:
           args: unzip -qq ${{ env.ARTIFACT }} -d dir
 
+      - name: Enable GitHub Pages
+        id: url
+        uses: actions/configure-pages@v2
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
