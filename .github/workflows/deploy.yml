@@ -19,7 +19,6 @@ env:
   ARTIFACT: webHelpADOC2-all.zip
   # Docker image version
   DOCKER_VERSION: 2.1.1479-p3869
-  ALGOLIA_ARTIFACT: algolia-indexes-ADOC2.zip
 
 jobs:
   build:
@@ -43,13 +42,6 @@ jobs:
           path: |
             artifacts/${{ env.ARTIFACT }}
             artifacts/report.json
-          retention-days: 7
-
-      - name: Upload algolia-indexes
-        uses: actions/upload-artifact@v3
-        with:
-          name: algolia-indexes
-          path: artifacts/${{ env.ALGOLIA_ARTIFACT }}
           retention-days: 7
 
   deploy:
