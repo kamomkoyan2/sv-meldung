@@ -1,0 +1,181 @@
+openapi: 3.0.2
+servers:
+  - url: /v3
+info:
+  description: |-
+    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
+    Swagger at [http://swagger.io](http://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!
+    You can now help us improve the API whether it's by making changes to the definition itself or to the code.
+    That way, with time, we can improve the API in general, and expose some of the new features in OAS3.
+
+    Some useful links:
+    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
+    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+  version: 1.0.17
+  title: Swagger Petstore - OpenAPI 3.0
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: mandate
+    description: Everything about Mandate
+    externalDocs:
+      description: Find out more
+      url: 'http://swagger.io'
+  - name: user
+    description: Operations about Mandate
+paths:
+  /api/v1/mandate/request/apply:
+    post:
+      tags:
+        - mandate
+      summary: Create Mandate for companies to access for
+      description: Returns a map of status codes to quantities
+      operationId: getInventory
+      x-swagger-router-controller: MandateController
+      responses:
+        '201':
+          description: Mandate Created Successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Conflict
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mandate'
+      security:
+        - api_key: []
+  /api/v1/mandate/confirm/apply/{companyNumber}:
+    post:
+      tags:
+        - mandate
+      summary: Confirm of mandate of company
+      description:  Confirm of mandate of company
+      operationId: confirmMandate
+      x-swagger-router-controller: MandateController
+      parameters:
+        - name: companyNumber
+          in: path
+          description: company number of mandate that needs to be deleted
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/v1/mandate/delete/{companyNumber}:
+    delete:
+      tags:
+        - mandate
+      summary: Delete Mandate of Company
+      description: Delete Mandate of Company
+      operationId: deleteMandate
+      x-swagger-router-controller: MandateController
+      parameters:
+        - name: companyNumber
+          in: path
+          description: company number of mandate that needs to be deleted
+          required: true
+          schema:
+            type: string
+      response:
+        '200':
+          description: Mandate Successfully was deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mandate'
+
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
+components:
+  schemas:
+    Mandate:
+      x-swagger-router-model: io.swagger.petstore.model.Mandate
+      properties:
+        companyNumber:
+          type: string
+          description: The number of requested to access company
+          example: 82889062
+
+      xml:
+        name: mandate
+      type: object
+    ApiResponse:
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: string
+            message:
+              type: string
+      xml:
+        name: '##default'
+      type: object
+    ErrorResponse:
+      type: object
+      properties:
+        response:
+          type: object
+          properties:
+            status:
+              type: number
+              example: 400
+            message:
+              type: string
+              example: Not Found
+  securitySchemes:
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'https://petstore.swagger.io/oauth/authorize'
+          scopes:
+            'write:pets': modify pets in your account
+            'read:pets': read your pets
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
