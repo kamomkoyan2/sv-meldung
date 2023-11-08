@@ -1,6 +1,4 @@
-# Create Mandate for companies to access for
-
-<!-- Use the <api-endpoint> tag to generate the documentation for a specific endpoint and method. -->
+# Request Mandate for companies
 
 <api-endpoint openapi-path="./../openapi.yaml" endpoint="/api/v1/mandate/request/apply" method="post">
     <response type="201">

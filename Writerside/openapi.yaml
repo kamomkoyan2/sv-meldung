@@ -3,14 +3,7 @@ servers:
   - url: /v3
 info:
   description: |-
-    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
-    Swagger at [http://swagger.io](http://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!
-    You can now help us improve the API whether it's by making changes to the definition itself or to the code.
-    That way, with time, we can improve the API in general, and expose some of the new features in OAS3.
-
-    Some useful links:
-    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
-    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+   SV MELDEPORTAL Server based on the OpenAPI 3.0 specification.
   version: 1.0.17
   title: Swagger Petstore - OpenAPI 3.0
   termsOfService: 'http://swagger.io/terms/'
@@ -32,9 +25,9 @@ paths:
     post:
       tags:
         - mandate
-      summary: Create Mandate for companies to access for
-      description: Returns a map of status codes to quantities
-      operationId: getInventory
+      summary: Request Mandate for companies
+      description: Request Mandate for companies
+      operationId: requestMandates
       x-swagger-router-controller: MandateController
       responses:
         '201':
@@ -79,10 +72,16 @@ paths:
       parameters:
         - name: companyNumber
           in: path
-          description: company number of mandate that needs to be deleted
+          description: company number of mandate that needs to be grant access
           required: true
           schema:
             type: string
+            example: 231828912
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GrantMandate'
       responses:
         '200':
           description: successful operation
@@ -103,28 +102,41 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 
-  /api/v1/mandate/delete/{companyNumber}:
-    delete:
+  /api/v1/mandate/revoke/{companyNumber}:
+    post:
       tags:
         - mandate
-      summary: Delete Mandate of Company
-      description: Delete Mandate of Company
-      operationId: deleteMandate
+      summary: Revoke Mandate of Company
+      description: Revoke Mandate of Company
+      operationId: revokeMandate
       x-swagger-router-controller: MandateController
       parameters:
         - name: companyNumber
           in: path
-          description: company number of mandate that needs to be deleted
+          description: company number of mandate that needs to be revoked
           required: true
           schema:
             type: string
-      response:
+      responses:
         '200':
-          description: Mandate Successfully was deleted
+          description: Mandate Successfully was revoked
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Mandate'
+                $ref: '#/components/schemas/ApiResponse'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
 
 externalDocs:
   description: Find out more about Swagger
@@ -138,6 +150,13 @@ components:
           type: string
           description: The number of requested to access company
           example: 82889062
+    GrantMandate:
+      x-swagger-router-model: io.swagger.petstore.model.Mandate
+      properties:
+        activationCode:
+          type: string
+          description: The activation code of requested to access company
+          example: GR3SV-BRS21-GHY23-BG5BE
 
       xml:
         name: mandate
@@ -166,16 +185,4 @@ components:
             message:
               type: string
               example: Not Found
-  securitySchemes:
-    petstore_auth:
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: 'https://petstore.swagger.io/oauth/authorize'
-          scopes:
-            'write:pets': modify pets in your account
-            'read:pets': read your pets
-    api_key:
-      type: apiKey
-      name: api_key
-      in: header
+
