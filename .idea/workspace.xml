@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d131ff26-549e-4e3f-ba93-9420ec35cc41" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/API-quickstart.md",
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/Changes.md",
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/Create-mandate-for-companies-access-for.md",
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/Delete-mandate-by-company-number.md",
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/Grant-access-of-mandate.md",
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/Mandate.md",
+      "/home/kamomkoyan/WritersideProjects/sv-meldung/Writerside/topics/api-docs.md"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
