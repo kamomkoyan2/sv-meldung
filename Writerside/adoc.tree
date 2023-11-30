@@ -9,9 +9,9 @@
     <toc-element topic="api-docs.md"/>
     <toc-element topic="API-quickstart.md"/>
     <toc-element topic="API-reference.md">
-        <toc-element topic="Mandate.md">
+        <toc-element topic="Company-Mandate.md">
         </toc-element>
-        <toc-element toc-title="Mandate">
+        <toc-element toc-title="Company-Mandate">
             <toc-element topic="Create-mandate-for-companies-access-for.md"/>
             <toc-element topic="Grant-access-of-mandate.md"/>
             <toc-element topic="Revoke-mandate-by-company-number.md"/>

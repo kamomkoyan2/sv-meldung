@@ -1,6 +1,6 @@
 # Request Mandate for companies
 
-<api-endpoint openapi-path="./../openapi.yaml" endpoint="/api/v1/mandate/request/apply" method="post">
+<api-endpoint openapi-path="./../openapi.yaml" endpoint="/mandate/request" method="post">
     <response type="201">
         <sample>
             {

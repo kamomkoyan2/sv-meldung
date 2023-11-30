@@ -1,6 +1,6 @@
 # Revoke Mandate by company number
 
-<api-endpoint openapi-path="./../openapi.yaml" endpoint="/api/v1/mandate/revoke/{companyNumber}" method="post">
+<api-endpoint openapi-path="./../openapi.yaml" endpoint="/mandate/revoke/{companyNumber}" method="post">
    <response type="200">
         <sample>
             {
